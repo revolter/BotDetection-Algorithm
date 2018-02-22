@@ -64,12 +64,12 @@ for idx, item in enumerate(labels):
     training_data.append([item] + info[idx])
 
 
-NN = Classifier(9, 264, 1, 0.15)
+NN = Classifier(9, 64, 1, 0.15)
 for x in range(10000):
     for item in training_data:
         NN.train(item[1:], item[0]) #Feed example --> Output Guess --> Backpropagate Error --> Adjust weights (see net.py for details)
 
 def isABot(input_user):
     Test = User(input_user)
-    odds = NN.query( normalize_alone(list(Test.__dict__.values())[1:])) 
+    odds = NN.query( normalize_alone(Test.data[1:])) 
     return odds[0][0]

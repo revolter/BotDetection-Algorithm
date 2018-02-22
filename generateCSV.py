@@ -17,7 +17,7 @@ def scrapeTrain(textFile, label, output_csv):
     for user in all_users:
         print(user)
         try:
-            all_data.append([label] + list(User(user).__dict__.values())[1:])
+            all_data.append([label] + User(user).data[1:])
         except Exception as e:
             print(str(e))
             continue 

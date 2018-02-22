@@ -5,7 +5,6 @@ np.random.seed(1)
 
 r = praw.Reddit() #Reddit authentication   
 
-
 blacklisted = ['askouija', 'test', 'freekarma4you'] #Subreddits where people engage in bot-like behavior
 
 
@@ -166,8 +165,6 @@ class User:
             self.spread = getSpread(usr, comment_list)
             self.average_time_beetween_comments = avTime(usr, comment_list)
             self.average_time_to_reply = timeToResponse(usr, comment_list)
-
-
-
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            self.data = [self.invalid_flag, self.bot_in_name, self.same_level_comments, self.keyword_present, 
+            self.unique_comments, self.few_posts, self.is_repetitive, self.spread, self.average_time_beetween_comments,
+            self.average_time_to_reply] #Why make this annoying list? Because SomeClass.__dict__.values() is not necessarily sorted in Python3.5 and lower
