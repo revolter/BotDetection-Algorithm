@@ -1,8 +1,8 @@
-#BotDetection 
+# BotDetection 
 
-The reddit bot that detects other reddit bots.
+The reddit bot that detects other bots.
 
-##Introduction
+## Introduction
 
 This repository hosts an Artifical Neural Network (ANN) that can be used to detect comment spambots on Reddit. Using 9 key statistics and over 400 examples, the bot is able to successfully classify most users with high confidence. The Neural Network itself is a basic feed-forward, with hyperparameters as follows: 
 
@@ -16,7 +16,7 @@ This repository hosts an Artifical Neural Network (ANN) that can be used to dete
 
 All of these can be adjusted easily in the source code (note that if you change the activation function, you will also have to adjust the calculations for gradient descent). The code is heavily commented and informed pull requests are welcome -- I am definitely still learning myself.
 
-##Usage and Installation
+## Usage and Installation
 
 You will need to install praw, nltk, and scipy if they are not already installed. When installing nltk, be sure to download the relevant material via `nltk.download`.
 
@@ -25,8 +25,8 @@ Once this is done, clone the repository and run `detector.py` using Python 3. If
 
 You can now open `detector.py`; run the `isABot` function with any username, and you will get back a number between 0 and 1 that represents how much the Neural Network thinks the user is a bot.
 
-##Retraining and Contributing
+## Retraining and Contributing
 
 The current code is far from optimized. If you would like to add more statistics for the bot to consider, you can do so in the `utils.py` file, which hosts the main `User`. Implementing additional will require you to update the `User` class to reflect them, as well as re-generate the `data.csv` file and increase the number of inputs the network accepts. 
 
-If you simply want to adjust the hyper-parameters, then no re-training is necessary.
+If you simply want to adjust the hyperparameters, then no re-training is necessary.
