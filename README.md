@@ -8,7 +8,7 @@ This repository hosts an Artifical Neural Network (ANN) that can be used to dete
 
 - 0.15 learning rate
 
-- 9 inputs, 264 hidden units, 1 output
+- 9 inputs, 64 hidden units, 1 output
 
 - sigmoid activation function
 
