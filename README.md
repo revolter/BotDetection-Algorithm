@@ -27,6 +27,6 @@ You can now open `detector.py`; run the `isABot` function with any username, and
 
 ## Retraining and Contributing
 
-The current code is far from optimized. If you would like to add more statistics for the bot to consider, you can do so in the `utils.py` file, which hosts the main `User`. Implementing additional will require you to update the `User` class to reflect them, as well as re-generate the `data.csv` file and increase the number of inputs the network accepts. 
+The current code is far from optimized. If you would like to add more statistics for the bot to consider, you can do so in the `utils.py` file, which hosts the main `User`. Implementing additional features will require you to update the `User` class to reflect them, as well as re-generate the `data.csv` file and increase the number of inputs the network accepts. 
 
 If you simply want to adjust the hyperparameters, then no re-training is necessary.
